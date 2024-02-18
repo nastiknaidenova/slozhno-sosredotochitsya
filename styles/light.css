@@ -9,5 +9,19 @@
   --title-text-shadow: 4px 4px 0 var(--accent-color);
   --link-text-shadow: 2px 2px 0 var(--accent-color);
   --background-image: url(../images/cover-image-light.png);
+}
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: rgb(255, 141, 203);
+    --title-color: rgb(255, 194, 230);
+    --paragraph-color: rgb(53, 52, 48);
+    --title-decor-color: var(--paragraph-color);
+    --section-title-color: var(--paragraph-color);
+    --rec-color: transparent;
+    --base-border: solid 1px var(--title-decor-color);
+    --title-text-shadow: 4px 4px 0 var(--accent-color);
+    --link-text-shadow: 2px 2px 0 var(--accent-color);
+    --background-image: url(../images/cover-image-light.png);    
+    }
 }
