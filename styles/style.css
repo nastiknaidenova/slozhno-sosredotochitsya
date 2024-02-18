@@ -256,8 +256,4 @@
   .street {
     grid-area: street;
   }
-
-  .page {
-    padding: 20px;
-  }
 }
