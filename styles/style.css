@@ -138,7 +138,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px; /*media*/
+  margin-top: 40px; /*media*/
 }
 
 /************/
@@ -163,8 +163,8 @@
   font-weight: var(--bold-font-weight);
 }
 
-.content__paragraph-title {
-  margin-top: 20px; /*media*/
+.content__paragraph-title:not(.gallery .content__paragraph-title) {
+  margin-top: 21px; /*media*/
 }
 
 .content__paragraph-subtitle {
@@ -205,6 +205,7 @@
 
 .gallery__items {
   display: grid;
+  grid-template-rows: 142px 355px 237px 355px 237px;
   gap: 10px;
   margin-top: 10px; /*media*/
 }
