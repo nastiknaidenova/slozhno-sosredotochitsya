@@ -8,6 +8,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-color: var(--body-background-color);
 }
 
 /*******************/
