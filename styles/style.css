@@ -1,5 +1,264 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+:root {
+  --accent-color: rgb(255, 0, 112);
+  --title-color: rgb(219, 0, 255);
+  --paragraph-color: rgb(241, 178, 206);
+  --title-decor-color: rgb(0, 0, 40);
+  --main-font: IBM Plex Mono;
+  --base-font-size: 18px;
+  --base-font-weight: 400;
+  --bold-font-weight: 700;
+  --base-border: solid 1px var(--accent-color);
+  --title-text-shadow: 4px 4px 0 var(--accent-color);
+  --link-text-shadow: 2px 2px 0 var(--accent-color);
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+/************/
+/*** BODY ***/
+/************/
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font), "Courier New", Courier, monospace;
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+/*******************/
+/*** DECORATIONS ***/
+/*******************/
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::after,
+.decorated-zone::after {
+  bottom: 0;
+  left: 0;
+  border-left: var(--base-border);
+  border-bottom: var(--base-border);
+}
+
+.decorated-zone::before,
+.decorated-zone::before {
+  top: 0;
+  right: 0;
+  border-right: var(--base-border);
+  border-top: var(--base-border);
+}
+
+.rec {
+  position: relative;
+}
+
+.rec span {
+  position: absolute;
+  top: 3px;
+  right: 32px;
+  color: var(--accent-color);
+}
+
+.rec::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+/*************************/
+/*** HEADER AND FOOTER ***/
+/*************************/
+
+.header,
+.footer {
+  position: relative;
+  min-height: 648px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding-top: 10px;
+  margin-bottom: 50px; /*media*/
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  background: transparent;
+  border: solid 1px transparent;
+  text-transform: lowercase;
+  font-family: var(--main-font);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  color: var(--accent-color);
+  width: 70px;
+  height: 26px;
+}
+
+.header__title,
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--bold-font-weight);
+  line-height: 82.5%;
+  text-shadow: var(--title-text-shadow);
+  color: var(--title-color);
+}
+
+.header__subtitle {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header__subtitle .content__paragraph-title {
+  max-width: 364px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.header__theme-menu-button_active {
+  border: var(--base-border);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /*media*/
+}
+
+/************/
+/*** MAIN ***/
+/************/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.content__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__section-title,
+.content__paragraph-title {
+  color: var(--accent-color);
+  font-size: var(--base-font-size);
+  font-weight: var(--bold-font-weight);
+}
+
+.content__paragraph-title {
+  margin-top: 20px; /*media*/
+}
+
+.content__paragraph-subtitle {
+  font-weight: var(--base-font-weight);
+  margin-top: 20px; /*media*/
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--title-decor-color);
+}
+
+.content__paragraph {
+  color: var(--paragraph-color);
+  font-size: var(--base-font-size);
+  font-weight: var(--base-font-weight);
+  line-height: 23.4px;
+  margin-top: 10px; /*media*/
+}
+
+.content__paragraph-link {
+  color: var(--paragraph-color);
+  text-decoration: none;
+  text-shadow: var(--link-text-shadow);
+}
+
+.content__paragraph-link:hover {
+  border-bottom: solid 1px var(--paragraph-color);
+}
+
+.content__paragraph-link:focus-visible {
+  outline: solid 1px var(--paragraph-color);
+}
+
+/**************/
+/*** GALERY ***/
+/**************/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  gap: 10px;
+  margin-top: 10px; /*media*/
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*************/
+/*** MEDIA ***/
+/*************/
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.8fr 0.8fr 1.2fr;
+    gap: 20px;
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+  .sunset {
+    grid-area: sunset;
+  }
+  .ice-cream {
+    grid-area: ice-cream;
+  }
+  .books {
+    grid-area: books;
+  }
+  .tape {
+    grid-area: tape;
+  }
+  .street {
+    grid-area: street;
+  }
+
+  .page {
+    padding: 20px;
+  }
 }
