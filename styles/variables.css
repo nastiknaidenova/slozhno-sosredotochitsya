@@ -1,8 +1,9 @@
 :root {
+  --body-background-color: rgb(0, 0, 40);
   --accent-color: rgb(255, 0, 112);
   --title-color: rgb(219, 0, 255);
   --paragraph-color: rgb(241, 178, 206);
-  --title-decor-color: rgb(0, 0, 40);
+  --title-decor-color: var(--body-background-color);
   --section-title-color: var(--accent-color);
   --rec-color: var(--accent-color);
   --main-font: IBM Plex Mono;
