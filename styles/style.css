@@ -38,7 +38,6 @@
   height: 25px;
 }
 
-.decorated-zone::after,
 .decorated-zone::after {
   bottom: 0;
   left: 0;
@@ -46,7 +45,6 @@
   border-bottom: var(--base-border);
 }
 
-.decorated-zone::before,
 .decorated-zone::before {
   top: 0;
   right: 0;
@@ -83,7 +81,7 @@
 .header,
 .footer {
   position: relative;
-  min-height: 648px;
+  height: 100vh;
 }
 
 .header {
