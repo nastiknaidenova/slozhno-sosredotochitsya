@@ -1,4 +1,16 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --accent-color: rgb(255, 0, 112);
+  --title-color: rgb(219, 0, 255);
+  --paragraph-color: rgb(241, 178, 206);
+  --title-decor-color: rgb(0, 0, 40);
+  --section-title-color: var(--accent-color);
+  --rec-color: var(--accent-color);
+  --main-font: IBM Plex Mono;
+  --base-font-size: 18px;
+  --base-font-weight: 400;
+  --bold-font-weight: 700;
+  --base-border: solid 1px var(--accent-color);
+  --title-text-shadow: 4px 4px 0 var(--accent-color);
+  --link-text-shadow: 2px 2px 0 var(--accent-color);
+  --background-image: url(../images/cover-image-dark.png);
+}
