@@ -86,7 +86,7 @@
 .header {
   display: grid;
   grid-template-rows: 0fr repeat(3, 1fr);
-  margin-bottom: 50px; /*media*/
+  margin-bottom: 40px; /*media*/
   padding-top: 10px;
 }
 
@@ -101,6 +101,7 @@
   flex-direction: column;
   gap: 11px;
   list-style: none;
+  margin-top: 5px;
 }
 
 .header__theme-menu-button {
@@ -127,6 +128,10 @@
   color: var(--title-color);
 }
 
+.header__title {
+  margin-top: 10px;
+}
+
 .header__subtitle {
   display: flex;
   justify-content: end;
@@ -135,7 +140,7 @@
 
 .header__subtitle .content__paragraph-title {
   max-width: 364px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-top: 0;
 }
 
