@@ -87,7 +87,7 @@
   flex-direction: column;
   gap: 11px;
   list-style: none;
-  margin-top: 5px;
+  margin-top: 5px; /*media*/
 }
 
 .header__theme-menu-button {
@@ -115,7 +115,7 @@
 }
 
 .header__title {
-  margin-top: 10px;
+  margin-top: 10px; /*media*/
 }
 
 .header__subtitle {
@@ -126,7 +126,7 @@
 
 .header__subtitle .content__paragraph-title {
   max-width: 364px;
-  margin-bottom: 30px;
+  margin-bottom: 50px; /*media*/
   margin-top: 0;
 }
 
@@ -148,7 +148,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 50px; /*media*/
 }
 
 .content__section {
@@ -220,7 +220,49 @@
 /*** MEDIA ***/
 /*************/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 580px) {
+  .header {
+    margin-bottom: 70px;
+  }
+
+  .header__title {
+    margin-top: 100px;
+    margin-left: -20px;
+  }
+
+  .header__subtitle .content__paragraph-title {
+    margin-bottom: 160px;
+  }
+
+  .header__theme-menu-list {
+    margin-top: 75px;
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .content__section {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .challenges,
+  .howto__focus {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .fraction__2-from-3 .content__paragraph-title:first-child {
+    margin-top: 0;
+  }
+
+  .fraction__1-from-4 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
   .gallery__items {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.8fr 0.8fr 1.2fr;
