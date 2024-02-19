@@ -23,18 +23,18 @@
   height: 25px;
 }
 
-.decorated-zone::after {
-  bottom: 10px;
-  left: 0;
-  border-left: var(--base-border);
-  border-bottom: var(--base-border);
-}
-
 .decorated-zone::before {
   top: 10px; /*media*/
   right: 0;
   border-right: var(--base-border);
   border-top: var(--base-border);
+}
+
+.decorated-zone::after {
+  bottom: 10px; /*media*/
+  left: 0;
+  border-left: var(--base-border);
+  border-bottom: var(--base-border);
 }
 
 .rec {
@@ -224,23 +224,27 @@
   .decorated-zone::before {
     top: 20px;
   }
-  
+
+  .decorated-zone::after {
+    bottom: 20px;
+  }
+
   .header {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     padding-top: 20px;
   }
 
+  .header__theme-menu-list {
+    margin-top: 110px;
+  }
+
   .header__title {
-    margin-top: 90px;
+    margin-top: 110px;
     margin-left: -20px;
   }
 
-  .header__theme-menu-list {
-    margin-top: 60px;
-   } 
-
   .header__subtitle .content__paragraph-title {
-    margin-bottom: 160px;
+    margin-bottom: 170px;
   }
 
   .content {
@@ -269,6 +273,10 @@
   }
 
   .gallery__items {
+    margin-top: 20px;
+  }
+
+  .gallery__items {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.8fr 0.8fr 1.2fr;
     gap: 20px;
@@ -291,5 +299,9 @@
   }
   .street {
     grid-area: street;
+  }
+
+  .footer {
+    margin-top: 25px;
   }
 }
