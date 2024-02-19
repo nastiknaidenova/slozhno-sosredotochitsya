@@ -274,9 +274,6 @@
 
   .gallery__items {
     margin-top: 20px;
-  }
-
-  .gallery__items {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.8fr 0.8fr 1.2fr;
     gap: 20px;
