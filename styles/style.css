@@ -107,7 +107,6 @@
 }
 
 .header__theme-menu-button:hover {
-  border: var(--base-border);
   border: var(--border-menu-hover);
 }
 
@@ -122,9 +121,6 @@
   line-height: 82.5%;
   text-shadow: var(--title-text-shadow);
   color: var(--title-color);
-}
-
-.header__title {
   margin-top: 10px; /*media*/
 }
 
@@ -347,9 +343,6 @@
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .header__title {
     margin-top: 50px;
   }
 
