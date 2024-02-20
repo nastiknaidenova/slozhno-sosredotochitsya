@@ -99,6 +99,7 @@
   color: var(--section-title-color);
   width: 70px;
   min-height: 26px;
+  transition: border 0.3s ease;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -207,14 +208,17 @@
   color: var(--paragraph-color);
   text-decoration: none;
   text-shadow: var(--link-text-shadow);
+  border-bottom: solid 1px transparent;
+  outline: solid 1px transparent;
+  transition: border 0.3s ease, outline 0.3s ease;
 }
 
 .content__paragraph-link:hover {
-  border-bottom: solid 1px var(--paragraph-color);
+  border-color: var(--paragraph-color);
 }
 
 .content__paragraph-link:focus-visible {
-  outline: solid 1px var(--paragraph-color);
+  outline-color: var(--paragraph-color);
 }
 
 /**************/
