@@ -169,7 +169,8 @@
 
 .content__paragraph-subtitle {
   font-weight: var(--base-font-weight);
-  margin-top: 20px; /*media*/
+  font-size: var(--base-font-size);
+  margin-top: 20px;
 }
 
 .title-decor {
@@ -275,7 +276,7 @@
   .gallery__items {
     margin-top: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.8fr 0.8fr 1.2fr;
+    grid-template-rows: 24.25% 29.05% 40.29%;
     gap: 20px;
     grid-template-areas:
       "sunset sunset ice-cream"
@@ -342,5 +343,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+
+  .challenges,
+  .howto__focus {
+    gap: 10px;
+  }
+
+  .gallery__items {
+    grid-template-rows: 24.55% 29.74% 40.9%;
+  }
+
+  .footer {
+    margin-top: 50px;
   }
 }
