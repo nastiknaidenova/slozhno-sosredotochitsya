@@ -7,6 +7,8 @@
   --section-title-color: var(--paragraph-color);
   --rec-color: transparent;
   --base-border: solid 1px var(--title-decor-color);
+  --border-menu-focus: solid 1px var(--paragraph-color);
+  --border-menu-hover: solid 1px rgba(50, 49, 45, 0.4);
   --title-text-shadow: 4px 4px 0 var(--accent-color);
   --link-text-shadow: 2px 2px 0 var(--accent-color);
   --background-image: url(../images/cover-image-light.png);
@@ -22,6 +24,8 @@
     --section-title-color: var(--paragraph-color);
     --rec-color: transparent;
     --base-border: solid 1px var(--title-decor-color);
+    --border-menu-focus: solid 1px var(--paragraph-color);
+    --border-menu-hover: solid 1px rgba(50, 49, 45, 0.4);
     --title-text-shadow: 4px 4px 0 var(--accent-color);
     --link-text-shadow: 2px 2px 0 var(--accent-color);
     --background-image: url(../images/cover-image-light.png);
